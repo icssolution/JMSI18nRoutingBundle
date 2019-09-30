@@ -233,7 +233,8 @@ class I18nRouter extends Router
                 }
 
                 if (count($params['_locales']) > 0) {
-                    $currentLocale = $params['locales'][0];
+					// Use the default 'es' locale
+                    $currentLocale = 'es';
                 } else {
                     // no host map, or same host means that the given locale is not supported for this route
                     throw new NotAcceptableLanguageException($currentLocale, $params['_locales']);
