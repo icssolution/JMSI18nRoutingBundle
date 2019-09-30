@@ -2,6 +2,8 @@
 
 i18n Routing Bundle for the Symfony Framework
 
+Modified to suit aa2k specific functionality
+
 Build Status: [![Build Status](https://secure.travis-ci.org/schmittjoh/JMSI18nRoutingBundle.png?branch=master)](http://travis-ci.org/schmittjoh/JMSI18nRoutingBundle)
 
 Documentation: 
