@@ -232,8 +232,13 @@ class I18nRouter extends Router
                     }
                 }
 
-                // no host map, or same host means that the given locale is not supported for this route
-                throw new NotAcceptableLanguageException($currentLocale, $params['_locales']);
+                if (count($params['_locales']) > 0) {
+                    // Set default locale
+                    $currentLocale = $params['locales'][0];
+                } else {
+                    // no host map, or same host means that the given locale is not supported for this route
+                    throw new NotAcceptableLanguageException($currentLocale, $params['_locales']);
+                }
             }
 
             unset($params['_locales']);
